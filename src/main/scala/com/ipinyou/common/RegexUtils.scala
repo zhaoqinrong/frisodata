@@ -1,14 +1,23 @@
 package com.ipinyou.common
 
-import com.ipinyou.mip.analyze.common.TimeFormatter.Pattern
-import org.scalatest.matchers.Matcher
 
 import scala.util.matching.Regex
 
 
 object RegexUtils {
-  def StringRegex(str:String,pattern:String):Boolean={
-    val regex = new Regex(pattern)
-    regex.findAllIn(str)
+  def StringRegex(str: String): Boolean = {
+    if (str != null) {
+      str.length > 20
+    } else {
+      true
+    }
+
+  }
+  def timeStampRegex(time: Long) :Boolean={
+    if (time!=null){
+      time.toString.length==10
+    }else{
+      true
+    }
   }
 }

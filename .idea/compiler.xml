@@ -9,5 +9,12 @@
         <module name="friso_data" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="analyze-audience" target="1.5" />
+      <module name="analyze-common" target="1.5" />
+      <module name="analyze-creative-insight" target="1.5" />
+      <module name="analyze-media-insight" target="1.5" />
+      <module name="friso_data" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

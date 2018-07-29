@@ -12,5 +12,5 @@ case class FrisoWarehouseModel(
                                 mac:String,
                                 androidId:String,
                                 openUdid:String,
-                                timestamp:Timestamp
+                                timestamp:Long
                               )
