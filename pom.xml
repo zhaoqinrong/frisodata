@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
     <version>1.0-SNAPSHOT</version>
 
-    <name>A Camel Scala Route</name>
+    <name>Friso_data</name>
 
 
 
@@ -20,6 +20,24 @@
         <spark.artifact>2.10</spark.artifact>
         <scala.version>2.11.8</scala.version>
         <spark.version>2.1.0</spark.version>
+        <hadoop.version>2.6.5</hadoop.version>
+
+
+        <DB.MIP.HOST>192.168.151.131</DB.MIP.HOST>
+        <DB.MIP.PORT>3306</DB.MIP.PORT>
+        <DB.MIP.USER>mip</DB.MIP.USER>
+        <DB.MIP.PSWD>MIP@2018</DB.MIP.PSWD>
+        <DB.MIP.DB.COMMON>mip</DB.MIP.DB.COMMON>
+
+        <HIVE.DB.COMMON>mipdev</HIVE.DB.COMMON>
+        <HIVE.DB.CUSTOM>mipdev</HIVE.DB.CUSTOM>
+
+        <WAREHOUSE.ROOT>/data/production/mdi2hdfs/</WAREHOUSE.ROOT>
+        <HDFS.ROOT>/data/production/mip</HDFS.ROOT>
+
+        <ADVERTISER>11</ADVERTISER>
+        <AudienceInsightUrl>http://192.168.163.12:5004/audienceinsight</AudienceInsightUrl>
+        <IREDIS.CONF.URL>http://192.168.152.52:7000/iredis/config/idm.xml</IREDIS.CONF.URL>
 
         <!--<DB.MIP.HOST>10.250.128.209</DB.MIP.HOST>-->
         <!--<DB.MIP.PORT>3306</DB.MIP.PORT>-->
@@ -32,10 +50,37 @@
     </properties>
 
     <dependencies>
-        <dependency>
+      <dependency>
             <groupId>com.ipinyou.mip</groupId>
             <artifactId>analyze-common</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+      <!--  <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>-->
+
+        <!-- ftp依赖包 -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>1.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-sql_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
         </dependency>
     </dependencies>
 

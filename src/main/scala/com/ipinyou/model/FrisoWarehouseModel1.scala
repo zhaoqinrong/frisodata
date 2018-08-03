@@ -1,9 +1,8 @@
 package com.ipinyou.model
 
-import com.google.protobuf.timestamp.Timestamp
 
 
-case class FrisoWarehouseModel(
+case class FrisoWarehouseModel1(
                                 campaignId:Long,
                                 trackingPublisher:String,
                                 trackingadslot:String,
